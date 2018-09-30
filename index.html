@@ -87,6 +87,21 @@ input:checked + .shader:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 </style>
 </head>
 
@@ -239,8 +254,9 @@ input:checked + .shader:before {
 			  </div>
 			</div>
 			<h2>Video (starts at demo, rewind for board details)</h2>
+			<div class="videoWrapper">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/HUw1-Kxq9_U?rel=0&amp;start=157" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-			
+			</div>
 			<br>
 			<br>
           </div>
@@ -293,10 +309,23 @@ input:checked + .shader:before {
             <h2>FPGA Robot Arm</h2>
           </header>
           <div class="w3-container w3-indigo">
-			<p>The goal of this project was to project image and text notifications on a desk and interact with that projection via computer vision. The physical hardware platform for the project was a robotic arm, disguised as a common desk lamp, with a camera and projector at the end, all controlled by an FPGA. Notifications come from from a connected computer and are keystone-corrected when projected, to eliminate distortion caused by projecting at an angle.</p>
-			<p>I worked as part of a team of 3 on this project, being responsible for the keystone correction, serial communication, and sound effects.  These portions are shown in green on the block diagram below.  View the <a href="https://COASTER19.github.io/Digital Design Project.pdf">final report here</a>.</p>
+			
 			<div class="w3-row">
-			  <iframe width="560" height="315" src="https://www.youtube.com/embed/hWRyzHjmXsQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			  <div class="w3-container w3-half">
+				<h2>Project Overview</h2>  
+				<p>The goal of this project was to project image and text notifications on a desk and interact with that projection via computer vision. The physical hardware platform for the project was a robotic arm, disguised as a common desk lamp, with a camera and projector at the end, all controlled by an FPGA. Notifications come from from a connected computer and are keystone-corrected when projected, to eliminate distortion caused by projecting at an angle.</p>
+				<p>I worked as part of a team of 3 on this project, being responsible for the keystone correction, serial communication, and sound effects.  These portions are shown in green on the block diagram below.  View the <a href="https://COASTER19.github.io/Digital Design Project.pdf">final report here</a>.</p>
+
+			  </div>
+			  <div class="w3-container w3-half">
+				<h2>Video</h2>
+				<div class="videoWrapper">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/hWRyzHjmXsQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+			  </div>
+			</div>
+			
+			<div class="w3-row">
 			  <div class="w3-container w3-half">
 				<h2>Device in operation</h2>  
 				<img src="https://i.imgur.com/MPT41Go.png" alt="Lights" class="w3-image">
@@ -306,6 +335,7 @@ input:checked + .shader:before {
 				<img src="https://i.imgur.com/gm5w2ID.jpg" alt="Lights" class="w3-image">
 			  </div>
 			</div>
+			
 			<h2>Block Diagram</h2>  
 			<img src="https://i.imgur.com/1UL9u73.png" alt="Lights" class="w3-image">
 
@@ -391,7 +421,9 @@ input:checked + .shader:before {
 			</div>
 			
 			<h2>Video</h2>
+			<div class="videoWrapper">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/CsmaXUJWYeE?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
 			<br>
 		  </div>
         </div>
@@ -411,8 +443,10 @@ input:checked + .shader:before {
           </header>
           <div class="w3-container w3-indigo">
 			<p>Uses an ATTiny85 with 2 RGB LED rings to display various effects on the bowtie.  There are two buttons, one to switch between animations, and one to control the brightness of the selected animation</p>
+			
+			<div class="videoWrapper">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/zOc-tgL9afA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            
+            </div>
 			<br>
           </div>
         </div>
@@ -464,8 +498,9 @@ input:checked + .shader:before {
           </header>
           <div class="w3-container w3-indigo">
 			<p>This device controls 8 outlets with Christmas lights.  An arduino communicates with an attached computer running Vixen, a program to make programing sequences less tedious.  I built this project in high school, and it has unfortunately since been disassembled, so the video is all the documentation I have.  </p>
+			<div class="videoWrapper">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/a_YLeChudtQ?rel=0&amp;start=71" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            
+            </div>
 			<br>
           </div>
         </div>
