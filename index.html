@@ -246,16 +246,16 @@ input:checked + .shader:before {
 </button>
 <!-- TactionTablet -->
 <button onclick="document.getElementById('project17').style.display='block'" class="w3-third w3-black w3-btn w3-hover-indigo">
-  <h2>Dell Precision E7440</h2>
-  <p>Motherboard SMD repair</p>
+  <h2>TactionTablet</h2>
+  <p>Tactile graphics display</p>
   <img src="https://i.imgur.com/vjG755j.jpg" alt="Lights" style="height:100%;max-height:200px">
   <br>
   <br>
 </button>
 <!-- Cell phone repair -->
 <button onclick="document.getElementById('project18').style.display='block'" class="w3-third w3-black w3-btn w3-hover-indigo">
-  <h2>Dell Precision E7440</h2>
-  <p>Motherboard SMD repair</p>
+  <h2>Cell Phone Repair</h2>
+  <p>For a few different phones</p>
   <img src="https://i.imgur.com/vjG755j.jpg" alt="Lights" style="height:100%;max-height:200px">
   <br>
   <br>
@@ -677,16 +677,18 @@ input:checked + .shader:before {
       <div id="project14" class="w3-modal">
         <div class="w3-modal-content w3-card-8 w3-animate-top">
           <header class="w3-container w3-blue"> 
-            <span onclick="document.getElementById('project13').style.display='none'" 
+            <span onclick="document.getElementById('project14').style.display='none'" 
             class="w3-closebtn">&times;</span>
-            <h2>Three story catapult</h2>
+            <h2>Reverse Engineering an IOT Motion Sensor</h2>
           </header>
           <div class="w3-container w3-indigo">
 			<br>
 			<br>
 			<div class="w3-row">
 			  <div class="w3-container w3-half">
-				<p>At the beginning of each year, my dorm builds a bunch of wooden contraptions to attract freshmen interested in our maker culture.  In May 2018, I was the construction lead for one of these projects, a large and very strong catapult.  This meant updating the CAD from 2015 when the catapult was last built as well as directing the construction of the device.  The whole catapult was built in a week of August 2018 and worked exceptionally well.</p>
+				<p>After leaving my dorm and moving to an apartment I wanted to set up a similar automation system.  Without ethernet between each area of the apartment, the system needed to be wireless.  I did this using the cheapest components possible, a system called SmartLife.</p>
+				<p>The software was awful and unable to reset triggers automatically when detecting motion.  Rather than start over with a more expensive system, I reverse engineered and modified the sensor itself to accomplish this functionality.</p>
+				<p>I believe the sensor used is a PIR612, but with no part number I cannot be sure.  The board differs substantially from the typical PIR Arduino sensors.  Luckily, I was able to find a datasheet with a similar application circuit and modify its delay and sensitivity appropriately for my application.</p>
   			  </div>
 			  <div class="w3-container w3-half">
 				<img src="https://i.imgur.com/x0qTPFb.jpg" alt="Lights" class="w3-image">
@@ -705,16 +707,18 @@ input:checked + .shader:before {
       <div id="project15" class="w3-modal">
         <div class="w3-modal-content w3-card-8 w3-animate-top">
           <header class="w3-container w3-blue"> 
-            <span onclick="document.getElementById('project13').style.display='none'" 
+            <span onclick="document.getElementById('project15').style.display='none'" 
             class="w3-closebtn">&times;</span>
-            <h2>Three story catapult</h2>
+            <h2>BLDC Motor Controller</h2>
           </header>
           <div class="w3-container w3-indigo">
 			<br>
 			<br>
 			<div class="w3-row">
 			  <div class="w3-container w3-half">
-				<p>At the beginning of each year, my dorm builds a bunch of wooden contraptions to attract freshmen interested in our maker culture.  In May 2018, I was the construction lead for one of these projects, a large and very strong catapult.  This meant updating the CAD from 2015 when the catapult was last built as well as directing the construction of the device.  The whole catapult was built in a week of August 2018 and worked exceptionally well.</p>
+				<p>For a controls class midterm project my team built an asynchronous sensorless brushless DC motor controller.  The goal would be to attach it to one of our homemade scooters for demo if it worked well enough.  We reused 3 extra boards of a buck converter PCB I had designed and manufactured for a previous class to save time since grading would be based on controls.</p>
+				<p>This was probably a mistake.  For the controls to work well, a clean measurement of the phase difference between voltage and current is critical.  With the lengthy wire runs from the bodged hardware, however, the entire system was incredibly noisy and could only spin a small quad-copter motor.</p>
+				<p>(I should also mention that by "team" I mean myself and a very good friend who also builds lots of stuff.  We realized early on it wouldn't work well but with 1 week allotted for the entire project we didn't care to make it better)</p>
   			  </div>
 			  <div class="w3-container w3-half">
 				<img src="https://i.imgur.com/x0qTPFb.jpg" alt="Lights" class="w3-image">
@@ -733,16 +737,20 @@ input:checked + .shader:before {
       <div id="project16" class="w3-modal">
         <div class="w3-modal-content w3-card-8 w3-animate-top">
           <header class="w3-container w3-blue"> 
-            <span onclick="document.getElementById('project13').style.display='none'" 
+            <span onclick="document.getElementById('project16').style.display='none'" 
             class="w3-closebtn">&times;</span>
-            <h2>Three story catapult</h2>
+            <h2>Car Stereo Modification</h2>
           </header>
           <div class="w3-container w3-indigo">
 			<br>
 			<br>
 			<div class="w3-row">
 			  <div class="w3-container w3-half">
-				<p>At the beginning of each year, my dorm builds a bunch of wooden contraptions to attract freshmen interested in our maker culture.  In May 2018, I was the construction lead for one of these projects, a large and very strong catapult.  This meant updating the CAD from 2015 when the catapult was last built as well as directing the construction of the device.  The whole catapult was built in a week of August 2018 and worked exceptionally well.</p>
+				<p>Purchasing a used car meant the stereo was outdated, lacking bluetooth support or voice controls.  Being an Audi, however, the sound system was designed by Bose and entirely nonstandard.  I reverse engineered the system to find a way to upgrade the radio to a standard one without sacrificing sound quality.</p>
+				<p>The amplifier is not built into the head unit, but instead into the base of the car.  Further, the alternator output is not filtered so the input is super noisy so any high impedance inputs or outputs will be noisy.  Insted, the amplifier expects a very low impedance output while still being a lower voltage.  This meant that the line level outputs on the stereo I purchased couldn't be used without sacrificing quality.  The solution arrived at was twofold:</p>
+				<p>1. Filter the input power to isolate noise into the head unit</p>
+				<p>2. Use a line level converter transformer to convert the low impedance speaker outputs to low impedance line level outputs</p>
+				<p>Amplifying the signal twice isn't ideal, but the sound quality is better than that from the native line level outputs where you can hear interference from the GPU and touchscreen activity.</p>
   			  </div>
 			  <div class="w3-container w3-half">
 				<img src="https://i.imgur.com/x0qTPFb.jpg" alt="Lights" class="w3-image">
@@ -761,9 +769,9 @@ input:checked + .shader:before {
       <div id="project17" class="w3-modal">
         <div class="w3-modal-content w3-card-8 w3-animate-top">
           <header class="w3-container w3-blue"> 
-            <span onclick="document.getElementById('project13').style.display='none'" 
+            <span onclick="document.getElementById('project17').style.display='none'" 
             class="w3-closebtn">&times;</span>
-            <h2>Three story catapult</h2>
+            <h2>TactionTablet</h2>
           </header>
           <div class="w3-container w3-indigo">
 			<br>
@@ -789,9 +797,9 @@ input:checked + .shader:before {
       <div id="project18" class="w3-modal">
         <div class="w3-modal-content w3-card-8 w3-animate-top">
           <header class="w3-container w3-blue"> 
-            <span onclick="document.getElementById('project13').style.display='none'" 
+            <span onclick="document.getElementById('project18').style.display='none'" 
             class="w3-closebtn">&times;</span>
-            <h2>Three story catapult</h2>
+            <h2>Cell Phone Repair</h2>
           </header>
           <div class="w3-container w3-indigo">
 			<br>
