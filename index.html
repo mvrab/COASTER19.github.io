@@ -244,6 +244,14 @@
                 <br>
                 <br>
             </button>
+            <!-- K40 Laser Cutter -->
+            <button onclick="document.getElementById('project20').style.display='block'" class="w3-third w3-black w3-btn w3-hover-indigo">
+                <h2>K40 Laser Cutter</h2>
+                <p>Modifications to make it usable</p>
+                <img src="https://i.imgur.com/vjG755j.jpg" alt="Lights" style="height:100%;max-height:200px">
+                <br>
+                <br>
+            </button>
         </div>
         <!-- project1 -->
         <div id="project1" class="w3-modal">
@@ -791,6 +799,42 @@
             <br>
             <br>
         </div>
+        <!-- project20 -->
+        <div id="project20" class="w3-modal">
+            <div class="w3-modal-content w3-card-8 w3-animate-top">
+                <header class="w3-container w3-blue">
+                    <span onclick="document.getElementById('project19').style.display='none'" 
+                        class="w3-closebtn">&times;</span>
+                    <h2>K40 Laser cutter</h2>
+                </header>
+                <div class="w3-container w3-indigo">
+                    <br>
+                    <br>
+                    <div class="w3-row">
+                        <div class="w3-container w3-half">
+                            <p>For my thesis mid-pandemic I needed access to a laser cutter.  The easiest way to do this was to purchase the cheapest model of CO2 laser cutter available and modify it to fit my use case.</p>
+                            <p>The $280 K40 laser cutter fits the bill, but its primary purpose is to make japanese stamps.  In order to use its "40W" CO2 laser on other materials it needed:</p>
+                            <ul>
+                                <li>Bed clamp to keep the material in focus.  Inspired by <a href="http://www.scorchworks.com/Blog/spring-loaded-k40-laser-platform/">ScorchWorks "Spring Loaded Adjustable Bed"</a> but with 3/4" and 1/2" angle aluminum to maximise cutting area</li>
+                                <li>Drag chain and air assist to manage the smoke.  I designed and 3D printed these myself since my machine's dimensions were slightly smaller than standard (there is no single laser cutter that is the K40, every one is slightly different depending on supplier)</li>
+                                <li>Current feedback to control and safely limit the laser power.  This was pretty simple and involved drilling a hole for an ammeter in the control panel plate.  I also engraved a new wooden front with labels to make it look better.</li>
+                                <li>Water chiller to keep the tube ~20C.  I drilled 2 holes in the side of a Craigslist mini fridge and installed tubing from the laser cutter to the inside.  There I had a trashcan with aquarium pump to circulate the chilled water.  This is the weakest part of the laser and limits jobs to ~20 minutes without overheating.  A professional CW-5000 chiller which would provide similar performance for continuous running would cost $360.  That's more than the cost of the laser itself so it doesn't make sense here.</li>
+                            </ul>  
+                            <p>There's so much more to say about this than makes sense to fit on a page like this, but I don't want to get too deep into it as all of the interesting quirks of this machine are well documented by the community and summarized at <a href="https://k40laser.se">K40laser.se</a></p>
+                            
+                        </div>
+                        <div class="w3-container w3-half">
+                            <img src="https://i.imgur.com/x0qTPFb.jpg" alt="Lights" class="w3-image">
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
         <script>
             // Get the modal
             var modal1 = document.getElementById('project1');
@@ -812,6 +856,7 @@
             var modal17 = document.getElementById('project17');
             var modal18 = document.getElementById('project18');
             var modal19 = document.getElementById('project19');
+            var modal20 = document.getElementById('project20');
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
             	if (event.target == modal1) {
@@ -870,6 +915,9 @@
                 }
             	if (event.target == modal19) {
                     modal19.style.display = "none";
+                }
+                if (event.target == modal20) {
+                    modal20.style.display = "none";
                 }
             }
             
