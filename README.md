@@ -1,2 +1,2 @@
 # COASTER19.github.io
-Temporary place for my project portfolio
+A more reliable place to host my project portfolio
