@@ -4,24 +4,10 @@
         <meta charset="UTF-8">
         <title>Mark Vrablic Resume</title>
     </head>
-    <script>
-    public void onPageFinished(WebView view, String url) {
-        if (view.getTitle().equals(""))
-            view.reload();
-    }
-    </script>
-    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-    <script type="text/javascript">
-        document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
-            var adobeDCView = new AdobeDC.View({clientId: "8c6d650ae93141228bf147099767e01d", divId: "adobe-dc-view"});
-            adobeDCView.previewFile({
-                content:{location: {url: "/resume/Mark%20Vrablic%20Resume.pdf"}},
-                metaData:{fileName: "Mark Vrablic Resume.pdf"}
-            }, {showLeftHandPanel: false, showPageControls: false});
-        });
-    </script>
+    <script src="/js/pdfobject.js"></script>
+    <script>PDFObject.embed("/resume/Mark%20Vrablic%20Resume.pdf", "#resume_div");</script>
     <body style="margin:0px;padding:0px;overflow:hidden">
-        <div id="adobe-dc-view"></div>
+        <div id="resume_div"></div>
     </body>
 </html>
 
