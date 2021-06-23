@@ -10,8 +10,19 @@
             view.reload();
     }
     </script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+            var adobeDCView = new AdobeDC.View({clientId: "<YOUR_CLIENT_ID>", divId: "adobe-dc-view"});
+            adobeDCView.previewFile({
+                content:{location: {url: "https://markv.me/resume/Mark%20Vrablic%20Resume.pdf"}},
+                metaData:{fileName: "Bodea Brochure.pdf"}
+            }, {showLeftHandPanel: false, showPageControls: false});
+        });
+    </script>
     <body style="margin:0px;padding:0px;overflow:hidden">
-        <iframe src="https://docs.google.com/gview?url=https://markv.me/resume/Mark%20Vrablic%20Resume.pdf&embedded=true" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
-        <p>PDF viewer failed to load... please refresh if not done automatically</p>
+        <div id="adobe-dc-view"></div>
     </body>
 </html>
+
+
