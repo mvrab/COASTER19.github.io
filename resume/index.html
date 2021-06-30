@@ -1,14 +1,23 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <title>Mark Vrablic Resume</title>
-        <script src="/js/pdfobject.js"></script>
-    </head>
-    <script>PDFObject.embed("/resume/Mark%20Vrablic%20Resume.pdf", "#resume_div");</script>
-    <body>
-        <div id="resume_div"></div>
-    </body>
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Mark Vrablic Resume</title>
+	</head>
+	<style>
+	#viewpdf{
+		height:100vh
+	}
+	</style>
+	<body style="margin:0px;padding:0px;overflow:hidden">
+		<div class="container">
+			<div id="viewpdf">
+			</div>
+		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.5/pdfobject.min.js"></script>
+	<script>
+		var viewpdf = $("#viewpdf")
+		PDFObject.embed("/resume/Mark%20Vrablic%20Resume.pdf",viewpdf)
+	</script>
 </html>
-
-
