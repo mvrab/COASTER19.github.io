@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html>
-   <body>
-      <script>
-         setTimeout(function(){
-            window.location.href = 'https://markv.me/';
-         }, 5000);
-      </script>
-      <p>Bad link.  Redirecting to home</p>
-   </body>
+<head>
+<style>
+h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body style="background-color:#000000;">
+<h1 style="color:white;">Link not found.</h1>
+<h2 style="color:white;">Redirecting to <a href="https://markv.me" style="color:white;">markv.me</a> in <span id="counter">6</span> second(s).</h2>
+<script type="text/javascript">
+function countdown() {
+    var i = document.getElementById('counter');
+    if (parseInt(i.innerHTML)<=0) {
+        window.location.href = "https://markv.me";
+    }
+if (parseInt(i.innerHTML)!=0) {
+    i.innerHTML = parseInt(i.innerHTML)-1;
+}
+}
+setInterval(function(){ countdown(); },1000);
+</script>
+</body>
 </html>
